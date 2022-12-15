@@ -1,25 +1,29 @@
-body {
+.page {
     font-family: 'Cormorant Garamond';
 }
 .header {
     height: 95px;
     display: flex;
   }
-  
-  .header-link {
+
+  .header__link {
     margin: auto;
     font-size: 28px;
   }
-  .menu-link {
+  .menu__link {
     font-size: 18px;
     margin-right: 20px;
   }
+
+  .menu__link_active {
+    text-decoration: underline;
+  }
   
-  .header-link, .menu-link {
+  .header-link, .menu__link {
     color: #10191e;
   }
 
-  .main, .header, .menu, .footer {
+  .content, .header, .menu, .footer {
     max-width: 1330px;
     min-width: 1280px;
     margin: auto; 
@@ -30,6 +34,12 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  .list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
   
   .menu {
@@ -48,23 +58,39 @@ body {
     background-size: cover;
   }
   
-  .project_beginner {
+  .project_width_l {
     width: 636px;
+  }
+
+  .project_width_m {
+    width: 306px;
+  }
+
+  .project_height_x1 {
+    height: 557px;
+  }
+  .project_height_l {
     height: 430px;
   }
+  .project_height_m {
+    height: 290px;
+  }
+  .project_height_s {
+    height: 240px;
+  }
+
+
+
   
-  .project_music-album {
+  .project_name_music-album {
     background-image: url("https://code.s3.yandex.net/web-code/album.png")
   }
   
-  .project_design-principles {
+  .project_name_design-principles {
     background-image: url("https://code.s3.yandex.net/web-code/design.png")
   }
   
-  .project_vanilla {
-    width: 306px;
-    height: 290px;
-  }
+
   
   .flex-column {
     width: 636px;
@@ -83,50 +109,37 @@ body {
     margin-top: 60px;
   }
   
-  .project_procrastinate {
-    width: 636px;
-    height: 557px;
-  }
   
-  .project-video {
+  .project__video {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-  .project_slider {
-    width: 306px;
-    height: 290px;
+  .project_name_slider {
+    
     background-image: url("https://code.s3.yandex.net/web-code/slider.gif")
   }
   
-  .project_reactive {
-    width: 306px;
-    height: 290px;
+  .project_name_reactive {
+  
     background-image: url("https://code.s3.yandex.net/web-code/reactive.gif")
   }
-  .project_p5 {
-    width: 636px;
-    height: 240px;
-  }
+
   
-  .flex-row_frameworks-inner {
-    width: 636px;
-    height: 290px;
-  }
+
   
-  .project_how-to-study {
+  .project_name_how-to-study {
     background-image: url("https://code.s3.yandex.net/web-code/how-to-study.png");
     order: 3;
   }
   
-  .project_across-russia {
+  .project_name_across-russia {
     background-image: url("https://code.s3.yandex.net/web-code/across-russia.png");
     order: 2;
-    flex-basis: 636px;
   }
   
-  .project_mesto {
+  .project_name_mesto {
     background-image: url("https://code.s3.yandex.net/web-code/mesto.png");
     order: 1;
   }
@@ -137,7 +150,7 @@ body {
     justify-content: center;
   }
   
-  .logo {
+  .footer__logo {
     height: 25px;
     width: 145px;
     background-image: url("https://pictures.s3.yandex.net/logo_black.png");
